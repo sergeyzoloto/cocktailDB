@@ -1,0 +1,22 @@
+{
+  "name": "cocktail-db",
+  "version": "1.0.0",
+
+  "scripts": {
+    "prettier:write": "prettier --write .",
+    "prettier:check": "prettier --check ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergeyzoloto/cocktailDB.git"
+  },
+  "author": "Sergey Zolotko",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/sergeyzoloto/cocktailDB/issues"
+  },
+  "homepage": "https://github.com/sergeyzoloto/cocktailDB",
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}
