@@ -8,18 +8,18 @@ Recipe page. Contains a drink image, short info, tags, ingredients, and instruct
 Design reference: https://www.kahlua.com/en-us/drinks/
 
 MUST-HAVE:
-Create the project structure
-Create a recipe page template
-Add a random recipe API request handler
-Add an API request for searching by a cocktail name
-Add an API request for searching by an ingredient
-Create a homepage view with a search string
-Create a result page template
-Add filtering by an ingredient after choosing one
-Add filtering by multiple ingredients
-Add user-friendly loading and error handlers
-Finalize the design making it responsive
-Prepare the repository
+1. Create the project structure
+2. Create a recipe page template
+3. Add a random recipe API request handler
+4. Add an API request for searching by a cocktail name
+5. Add an API request for searching by an ingredient
+6. Create a homepage view with a search string
+7. Create a result page template
+8. Add filtering by an ingredient after choosing one
+9. Add filtering by multiple ingredients
+10. Add user-friendly loading and error handlers
+11. Finalize the design making it responsive
+12. Prepare the repository
 
 NICE-TO-HAVE
 Additional filters by category and glasses with multiple options choosing allowed
