@@ -31,6 +31,8 @@ export const FORM_FIELD_ID = 'form-field';
 export const SHOW_HEADER_COVER_ID = 'show-header-cover';
 export const PAGE_CONTAINER_ID = 'page-container';
 export const OVERLAY_ID = 'drink-search-overlay';
+export const RESULT_ELEMENT_ID = 'result-line';
+export const RESULT_LIST_ID = 'result-table';
 
 /* An instance for building a recipe page */
 export const example = {

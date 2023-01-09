@@ -27,13 +27,8 @@ export const createCover = (link, title) => {
       <img class="${COVER_IMAGE_ID}" alt="drink image" src=${link}>
     </div>
     <div class="
-    ${RELATIVE_ID}
-    ${CONTAINER_ID}
-    ${TITLE_ID}
-    ${FLEX_ID}
-    ${FLEX_COL_ID}
-    ${JUSTIFY_END_ID}
-    ${CENTERED_ID}">
+    ${RELATIVE_ID} ${CONTAINER_ID} ${TITLE_ID}
+    ${FLEX_ID} ${FLEX_COL_ID} ${JUSTIFY_END_ID} ${CENTERED_ID}">
       <h1 class=${H1_TITLE_ID}>${title}</h1>
     </div>
   `;
