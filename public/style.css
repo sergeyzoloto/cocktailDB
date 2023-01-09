@@ -4,10 +4,6 @@
 :after,
 :before {
   box-sizing: border-box;
-
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
 }
 
 ul,
@@ -31,6 +27,19 @@ h2 {
   font-weight: bold;
   font-family: 'Oswald', sans-serif;
   letter-spacing: 0.6px;
+}
+
+.page-container {
+  min-height: 100vh;
+  z-index: 20;
+  position: fixed;
+
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .column-header {
@@ -148,39 +157,71 @@ h2 {
 
 .columns {
   flex: 1 1 0;
-  margin: 0 1rem;
+  margin: 0 1.25rem;
 }
 
 /* Header */
 .page-header {
   width: 100%;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
-  z-index: 6;
-  margin: 0 auto;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+}
+
+.show-header-cover {
+  background-color: rgb(255 205 0) !important;
 }
 
 .header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   background-color: rgba(0, 0, 0, 0);
   padding: 8px 16px;
-  z-index: 7;
+  z-index: 50;
 }
 
-.search-button {
+.drink-search-overlay {
+  background-color: rgb(0 0 0/1);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.75;
+  display: none;
+  z-index: 10;
+}
+
+#search-button {
   min-width: 48px;
   min-height: 48px;
   cursor: pointer;
   background-color: transparent;
   border: none;
+  z-index: 50;
+}
+
+#close-search-button {
+  min-width: 48px;
+  min-height: 48px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  display: none;
+  z-index: 50;
 }
 
 .logo {
-  z-index: 10;
+  z-index: 50;
 }
 
 .logo-link {
@@ -192,6 +233,27 @@ h2 {
     0 -2px rgb(255 205 0);
   color: #cf2e2e;
   text-decoration: none;
+}
+
+.logo-link:hover {
+  /* 2 pixel black shadow to left, top, right and bottom */
+  text-shadow: -3px 0 rgb(255 205 0), 0 3px rgb(255 205 0), 3px 0 rgb(255 205 0),
+    0 -3px rgb(255 205 0);
+}
+
+#form-field {
+  text-align: left;
+  border: none;
+  background-color: transparent;
+  outline: none !important;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: 'Oswald', sans-serif;
+  color: rgb(168 7 42/1);
+  width: 100%;
+  display: none;
+
+  z-index: 50;
 }
 
 @media screen and (min-width: 640px) {

@@ -24,6 +24,13 @@ export const COLUMN_HEADERS_ID = 'column-header';
 export const HEADER_ID = 'page-header';
 export const HEADER_CONTENT_ID = 'header-inner';
 export const SEARCH_BUTTON_ID = 'search-button';
+export const CLOSE_SEARCH_BUTTON_ID = 'close-search-button';
+export const LOGO_ID = 'logo';
+export const LOGO_LINK_ID = 'logo-link';
+export const FORM_FIELD_ID = 'form-field';
+export const SHOW_HEADER_COVER_ID = 'show-header-cover';
+export const PAGE_CONTAINER_ID = 'page-container';
+export const OVERLAY_ID = 'drink-search-overlay';
 
 /* An instance for building a recipe page */
 export const example = {
