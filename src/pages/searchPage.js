@@ -1,5 +1,6 @@
 import { PAGE_CONTAINER_ID, OVERLAY_ID, RESULT_LIST_ID } from '../constants.js';
 import { createResultLine } from '../views/searchElement.js';
+import { getDrinkById } from '../api/idDrink.js';
 
 export function renderSearchResult(data) {
   console.log(data.drinks); // Render Result Page
@@ -16,5 +17,11 @@ export function renderSearchResult(data) {
   data.drinks.forEach((drink) => {
     const line = createResultLine(drink);
     resultList.appendChild(line);
+
+    line.addEventListener('click', selectDrinkPage(drink.idDrink));
   });
 }
+
+const selectDrinkPage = (index) => () => {
+  getDrinkById(index);
+};
