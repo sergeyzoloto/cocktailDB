@@ -10,6 +10,9 @@ import {
   CONTAINER_ID,
   FLEX_ELEMENT_ID,
   SPACE_EVENLY_ID,
+  INGREDIENT_ID,
+  MEASURE_TAG_ID,
+  COLUMN_HEADERS_ID,
 } from '../constants.js';
 
 export const drinkTable = (data) => {
@@ -54,22 +57,25 @@ export const drinkTable = (data) => {
   ingredientsArray.forEach((item) => {
     if (item) {
       const measure = measuresArray.shift();
-      const li = `<li>${measure ? measure : ''} ${item}</li>`;
+      const li = `<li class=${INGREDIENT_ID}>
+        <b class='${MEASURE_TAG_ID}'>${
+        measure ? measure : ''
+      }</b> ${item}</li>`;
       ul = ul + li;
     }
   });
 
   element.innerHTML = String.raw`
   <div class=${FLEX_ELEMENT_ID}>
-    <h2>Ingredients</h2>
+    <h2 class='${COLUMN_HEADERS_ID}'>Ingredients</h2>
     <ul>${ul}</ul>
   </div>
   <div class=${FLEX_ELEMENT_ID}>
-    <h2>Instructions</h2>
+    <h2 class='${COLUMN_HEADERS_ID}'>Instructions</h2>
     <p>${data.strInstructions}</p>
   </div>
   <div class=${FLEX_ELEMENT_ID}>
-    <h2>Facts</h2>
+    <h2 class='${COLUMN_HEADERS_ID}'>Facts</h2>
     <p>${collectFacts(data)}</p>
   </div>
   `;
@@ -86,17 +92,20 @@ export const drinkTable = (data) => {
 // Attach description
 const collectFacts = (data) => {
   let string = '';
+
+  if (data.strIBA) {
+    string = string + `${data.strIBA}<br>`;
+  }
   if (data.strCategory) {
-    string = string + `${data.strCategory}<br>`;
+    if (data.strCategory !== 'Ordinary Drink') {
+      string = string + `${data.strCategory}<br>`;
+    }
   }
   if (data.strAlcoholic) {
     string = string + `${data.strAlcoholic}<br>`;
   }
   if (data.strGlass) {
     string = string + `${data.strGlass}<br>`;
-  }
-  if (data.strIBA) {
-    string = string + `${data.strIBA}<br>`;
   }
 
   return string;

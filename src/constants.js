@@ -15,7 +15,15 @@ export const JUSTIFY_END_ID = 'justify-end';
 export const CENTERED_ID = 'centered';
 export const FLEX_ELEMENT_ID = 'columns';
 export const SPACE_EVENLY_ID = 'space-evenly';
+export const SPACE_BETWEEN_ID = 'space-between';
+export const ALIGN_CENTER_ID = 'align-center';
 export const H1_TITLE_ID = 'h1-title';
+export const INGREDIENT_ID = 'li-ingredient';
+export const MEASURE_TAG_ID = 'measure';
+export const COLUMN_HEADERS_ID = 'column-header';
+export const HEADER_ID = 'page-header';
+export const HEADER_CONTENT_ID = 'header-inner';
+export const SEARCH_BUTTON_ID = 'search-button';
 
 /* An instance for building a recipe page */
 export const example = {

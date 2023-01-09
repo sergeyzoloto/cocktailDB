@@ -2,6 +2,7 @@ import { USER_INTERFACE_ID } from '../constants.js';
 import { example } from '../constants.js';
 import { createCover } from '../views/imageView.js';
 import { drinkTable } from '../views/recipeTableView.js';
+import { createPageHeader } from '../views/headerView.js';
 
 const data = example;
 
@@ -11,14 +12,18 @@ export const initWelcomePage = () => {
   userInterface.innerHTML = '';
 
   // Create a welcome element
-  const welcomeElement = document.createElement('div');
-  userInterface.appendChild(welcomeElement);
+  const welcomePage = document.createElement('div');
+  userInterface.appendChild(welcomePage);
+
+  // Attach a header
+  const header = createPageHeader();
+  welcomePage.appendChild(header);
 
   // Attach a drink image and title to the page cover
   const cover = createCover(data.strDrinkThumb, data.strDrink);
-  welcomeElement.appendChild(cover);
+  welcomePage.appendChild(cover);
 
   // Attach a table containing the drink details
   const tableContent = drinkTable(data);
-  welcomeElement.appendChild(tableContent);
+  welcomePage.appendChild(tableContent);
 };
