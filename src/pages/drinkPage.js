@@ -11,6 +11,7 @@ import {
 import { createCover } from '../views/imageView.js';
 import { drinkTable } from '../views/recipeTableView.js';
 import { createPageHeader } from '../views/headerView.js';
+import { getDrinksByName } from '../api/searchName.js';
 
 export function renderDrinkPage(data) {
   // Attach result to the interface
@@ -41,8 +42,12 @@ export function renderDrinkPage(data) {
   // Attach a table containing the drink details
   const tableContent = drinkTable(data);
   welcomePage.appendChild(tableContent);
+
+  // Attach search function to the input
+  assignTypeListener();
 }
 
+// Function to display a search string in the header:
 const openHeader = () => {
   document
     .querySelector(`.${HEADER_CONTENT_ID}`)
@@ -54,6 +59,7 @@ const openHeader = () => {
   document.querySelector(`.${OVERLAY_ID}`).style.display = 'block';
 };
 
+// Function to hide the search string:
 const closeHeader = () => {
   document
     .querySelector(`.${HEADER_CONTENT_ID}`)
@@ -62,4 +68,29 @@ const closeHeader = () => {
   document.getElementById(SEARCH_BUTTON_ID).style.display = 'inline-block';
   document.getElementById(FORM_FIELD_ID).style.display = 'none';
   document.querySelector(`.${OVERLAY_ID}`).style.display = 'none';
+};
+
+// When a user stops typing, the app requests a list from API
+const assignTypeListener = () => {
+  const inputElement = document.getElementById(FORM_FIELD_ID);
+
+  let keyStoppedTimer = null;
+  inputElement.addEventListener(
+    'keydown',
+    function (event) {
+      clearTimeout(keyStoppedTimer);
+      keyStoppedTimer = setTimeout(function () {
+        event.target.dispatchEvent(new Event('keyStopped'));
+      }, 600);
+    },
+    false,
+  );
+
+  inputElement.addEventListener(
+    'keyStopped',
+    function (event) {
+      getDrinksByName(inputElement.value);
+    },
+    false,
+  );
 };
