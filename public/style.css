@@ -236,7 +236,7 @@ h2 {
 }
 
 .logo-link:hover {
-  /* 2 pixel black shadow to left, top, right and bottom */
+  /* 3 pixel black shadow to left, top, right and bottom */
   text-shadow: -3px 0 rgb(255 205 0), 0 3px rgb(255 205 0), 3px 0 rgb(255 205 0),
     0 -3px rgb(255 205 0);
 }
@@ -258,7 +258,6 @@ h2 {
 /* Result Page */
 .result-line {
   min-height: 20px;
-  /*border: 1px solid black;*/
   padding: 16px;
   text-transform: uppercase;
   font-size: 24px;
@@ -273,6 +272,22 @@ h2 {
   top: 88px;
   min-height: 100%;
   width: 100%;
+}
+
+/* Errors */
+.status-message,
+.error-message {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 88px;
+  width: 100%;
+  min-height: 20px;
+  padding: 16px;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-family: 'Oswald', sans-serif;
 }
 
 @media screen and (min-width: 640px) {
