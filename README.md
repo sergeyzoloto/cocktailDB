@@ -13,14 +13,15 @@ Launching the app displays a random drink description as a homepage.
 
 ```text
 root
-└── app.js
-└── constants.js
+└── server.js
 └── public
     └── assets
 └── src
     └── api
     └── pages
     └── views
+    └── app.js
+    └── constants.js
 ```
 
 - `public` contains styles and static files
