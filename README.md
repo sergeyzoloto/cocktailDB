@@ -1,13 +1,13 @@
 # cocktailDB
 
-This is the [API module project](https://github.com/HackYourFuture/UsingAPIs/tree/main/Week3) for the HackYourFuture curriculum. cocktailDB is a single page application that interacts with TheCocktailDB public API and contains the following pages:
+This is the [API module project](https://github.com/HackYourFuture/UsingAPIs/tree/main/Week3){:target="_blank"} for the HackYourFuture curriculum. cocktailDB is a single page application that interacts with TheCocktailDB public API and contains the following pages:
 
 - Recipe page. Contains a drink image, short info, tags, ingredients, and instructions.
 - Search page. When a user stops typing in the search form, a result list containing drinks appears below the search string. Clicking on a cocktail opens a recipe page.
 
 Launching the app displays a random drink description as a homepage.
 
-Design reference: <https://www.kahlua.com/en-us/drinks/>
+[Design reference](https://www.kahlua.com/en-us/drinks/){:target="_blank"}
 
 ## The project structure
 
@@ -61,8 +61,8 @@ $ npm install
 $ npm start
 ```
 
-Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
+Open [http://localhost:8080](http://localhost:8080){:target="_blank"} to view it in the browser.
 
 ## Demo
 
-[I'm feeling lucky!](https://sergeyzoloto.github.io/cocktailDB/)
+[I'm feeling lucky!](https://sergeyzoloto.github.io/cocktailDB/){:target="_blank"}
