@@ -4,7 +4,6 @@
  */
 
 import {
-  RELATIVE_ID,
   TABLE_ID,
   FLEX_ID,
   CONTAINER_ID,
@@ -13,6 +12,7 @@ import {
   INGREDIENT_ID,
   MEASURE_TAG_ID,
   COLUMN_HEADERS_ID,
+  RELATIVE_ID,
 } from '../constants.js';
 
 export const drinkTable = (data) => {
