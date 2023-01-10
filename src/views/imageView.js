@@ -20,7 +20,7 @@ import {
 export const createCover = (link, title) => {
   const element = document.createElement('div');
   element.classList.add(COVER_ID);
-  element.classList.add(ABSOLUTE_ID);
+  element.classList.add(RELATIVE_ID);
 
   element.innerHTML = String.raw`
     <div class="${ABSOLUTE_ID} ${IMAGE_CONTAINER_ID}">
