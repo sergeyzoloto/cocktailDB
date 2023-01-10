@@ -13,6 +13,8 @@ Design reference: <https://www.kahlua.com/en-us/drinks/>
 
 ```text
 root
+└── app.js
+└── constants.js
 └── public
     └── assets
 └── src
@@ -28,6 +30,7 @@ root
   - `api` contains code to communicate with the web
   - `views` contains pure function components only used to render data into DOM elements
   - `app.js` contains the initialization code, simply starts the app
+- `server.js` is the start point of the server
 
 ## The project features
 
