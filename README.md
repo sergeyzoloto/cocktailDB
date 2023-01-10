@@ -65,4 +65,4 @@ Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
 
 ## Demo
 
-[I'm feeling lucky!](https://external.ink?to=https://sergeyzoloto.github.io/cocktailDB/)
+[I'm feeling lucky!](https://sergeyzoloto.github.io/cocktailDB/)
