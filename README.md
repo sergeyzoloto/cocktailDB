@@ -1,11 +1,5 @@
 # cocktailDB
 
-![Welcome Page](repo/welcome.jpg)
-
-|  Desktop            |  Mobile |
-|---------------------|----------------------|
-|![Welcome Page](repo/welcome.jpg) | ![Mobile Version](repo/mobile.jpg) |
-
 This is the [API module project](https://github.com/HackYourFuture/UsingAPIs/tree/main/Week3) for the HackYourFuture curriculum. cocktailDB is a single page application that interacts with TheCocktailDB public API and contains the following pages:
 
 - Recipe page. Contains a drink image, short info, tags, ingredients, and instructions.
@@ -41,6 +35,10 @@ root
 2. After the user stops writing a search query, the application reflects a page containing the search results by a drink name. Selecting an option generates a required drink page.
 3. The app has error handling for the interaction with the API. In case of rejection user is given a status/error message.
 4. The app is builded responsive.
+
+|  Desktop            |  Mobile |
+|---------------------|----------------------|
+|![Welcome Page](repo/welcome.jpg) | ![Mobile Version](repo/mobile.jpg) |
 
 ## Install
 
