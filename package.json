@@ -1,10 +1,10 @@
 {
   "name": "cocktail-db",
   "version": "1.0.0",
+  "main": "server.js",
 
   "scripts": {
-    "prettier:write": "prettier --write .",
-    "prettier:check": "prettier --check ."
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -12,6 +12,9 @@
   },
   "author": "Sergey Zolotko",
   "license": "",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
   "bugs": {
     "url": "https://github.com/sergeyzoloto/cocktailDB/issues"
   },
