@@ -1,5 +1,8 @@
 # cocktailDB
 
+![Welcome Page](repo/welcome.jpg)
+![Mobile Version](repo/mobile.jpg)
+
 API module single page app
 
 A Single Page Application interacts with TheCocktailDB API and contains the following routes:
@@ -8,7 +11,7 @@ A Single Page Application interacts with TheCocktailDB API and contains the foll
 - Results page. When a user stops typing, a result list containing drink and ingredient options appears below the search string. Clicking on a cocktail opens a recipe page. Clicking on an ingredient adds filtering.
 - Recipe page. Contains a drink image, short info, tags, ingredients, and instructions.
 
-Design reference: https://www.kahlua.com/en-us/drinks/
+Design reference: <https://www.kahlua.com/en-us/drinks/>
 
 MUST-HAVE:
 
