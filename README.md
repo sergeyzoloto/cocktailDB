@@ -1,37 +1,20 @@
 # cocktailDB
 
-API module single page app
+This is the [API module project](https://github.com/HackYourFuture/UsingAPIs/tree/main/Week3) for the HackYourFuture curriculum. cocktailDB is a single page application that interacts with TheCocktailDB public API and contains the following pages:
 
-A Single Page Application interacts with TheCocktailDB API and contains the following routes:
-
-- Homepage. Displays a welcome intro, a search string, and a button “I’m feeling lucky” returning a random cocktail.
-- Results page. When a user stops typing, a result list containing drink and ingredient options appears below the search string. Clicking on a cocktail opens a recipe page. Clicking on an ingredient adds filtering.
 - Recipe page. Contains a drink image, short info, tags, ingredients, and instructions.
+- Search page. When a user stops typing in the search form, a result list containing drinks appears below the search string. Clicking on a cocktail opens a recipe page.
 
-Design reference: https://www.kahlua.com/en-us/drinks/
+Launching the app displays a random drink description as a homepage.
 
-MUST-HAVE:
+[Design reference](https://www.kahlua.com/en-us/drinks/)
 
-1. Create the project structure
-2. Create a recipe page template
-3. Add a random recipe API request handler
-4. Add an API request for searching by a cocktail name
-5. Add an API request for searching by an ingredient
-6. Create a homepage view with a search string
-7. Create a result page template
-8. Add filtering by an ingredient after choosing one
-9. Add filtering by multiple ingredients
-10. Add user-friendly loading and error handlers
-11. Finalize the design making it responsive
-12. Prepare the repository
-
-NICE-TO-HAVE
-Additional filters by category and glasses with multiple options choosing allowed
-
-## The project structure description
+## The project structure
 
 ```text
 root
+└── app.js
+└── constants.js
 └── public
     └── assets
 └── src
@@ -47,3 +30,39 @@ root
   - `api` contains code to communicate with the web
   - `views` contains pure function components only used to render data into DOM elements
   - `app.js` contains the initialization code, simply starts the app
+- `server.js` is the start point of the server
+
+## The project features
+
+1. When the page loads, the user is given a description of a random cocktail.
+2. After the user stops writing a search query, the application reflects a page containing the search results by a drink name. Selecting an option generates a required drink page.
+3. The app has error handling for the interaction with the API. In case of rejection user is given a status/error message.
+4. The app is builded responsive.
+
+|  Desktop            |  Mobile |
+|---------------------|----------------------|
+|![Welcome Page](repo/welcome.jpg) | ![Mobile Version](repo/mobile.jpg) |
+
+## Install
+
+To get started you can simply clone the repo and install the dependencies in the root folder:
+
+```bash
+# Clone this repository
+$ git clone https://github.com/sergeyzoloto/cocktailDB.git
+
+# Go into the repository
+$ cd cocktailDB
+
+# Install dependencies
+$ npm install
+
+# Run the app
+$ npm start
+```
+
+Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
+
+## Demo
+
+[I'm feeling lucky!](https://sergeyzoloto.github.io/cocktailDB/)
