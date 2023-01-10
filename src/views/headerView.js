@@ -16,7 +16,10 @@ import {
   FORM_FIELD_ID,
   CLOSE_SEARCH_BUTTON_ID,
   OVERLAY_ID,
+  SHOW_HEADER_COVER_ID,
 } from '../constants.js';
+
+import { getDrinksByName } from '../api/searchName.js';
 
 export const createPageHeader = () => {
   const element = document.createElement('header');
@@ -54,4 +57,52 @@ export const createPageHeader = () => {
   element.classList.add(CONTAINER_ID);
 
   return element;
+};
+
+// Function to display a search string in the header:
+export const openHeader = () => {
+  document
+    .querySelector(`.${HEADER_CONTENT_ID}`)
+    .classList.add(SHOW_HEADER_COVER_ID);
+  document.getElementById(SEARCH_BUTTON_ID).style.display = 'none';
+  document.getElementById(CLOSE_SEARCH_BUTTON_ID).style.display =
+    'inline-block';
+  document.getElementById(FORM_FIELD_ID).style.display = 'inline-block';
+  document.querySelector(`.${OVERLAY_ID}`).style.display = 'block';
+};
+
+// Function to hide the search string:
+export const closeHeader = () => {
+  document
+    .querySelector(`.${HEADER_CONTENT_ID}`)
+    .classList.remove(SHOW_HEADER_COVER_ID);
+  document.getElementById(CLOSE_SEARCH_BUTTON_ID).style.display = 'none';
+  document.getElementById(SEARCH_BUTTON_ID).style.display = 'inline-block';
+  document.getElementById(FORM_FIELD_ID).style.display = 'none';
+  document.querySelector(`.${OVERLAY_ID}`).style.display = 'none';
+};
+
+// When a user stops typing, the app requests a list from API
+export const assignTypeListener = () => {
+  const inputElement = document.getElementById(FORM_FIELD_ID);
+
+  let keyStoppedTimer = null;
+  inputElement.addEventListener(
+    'keydown',
+    function (event) {
+      clearTimeout(keyStoppedTimer);
+      keyStoppedTimer = setTimeout(function () {
+        event.target.dispatchEvent(new Event('keyStopped'));
+      }, 600);
+    },
+    false,
+  );
+
+  inputElement.addEventListener(
+    'keyStopped',
+    function (event) {
+      getDrinksByName(inputElement.value);
+    },
+    false,
+  );
 };

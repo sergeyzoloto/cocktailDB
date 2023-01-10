@@ -33,6 +33,8 @@ export const PAGE_CONTAINER_ID = 'page-container';
 export const OVERLAY_ID = 'drink-search-overlay';
 export const RESULT_ELEMENT_ID = 'result-line';
 export const RESULT_LIST_ID = 'result-table';
+export const STATUS_MESSAGE_ID = 'status-message';
+export const ERROR_ELEMENT_ID = 'error-message';
 
 /* An instance for building a recipe page */
 export const example = {

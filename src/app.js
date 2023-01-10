@@ -1,7 +1,12 @@
 import { initWelcomePage } from './pages/welcomePage.js';
+import { renderErrorPage } from './pages/errorPage.js';
 
-const loadApp = () => {
-  initWelcomePage();
-};
+function loadApp() {
+  try {
+    initWelcomePage();
+  } catch (err) {
+    renderErrorPage(err);
+  }
+}
 
 window.addEventListener('load', loadApp);

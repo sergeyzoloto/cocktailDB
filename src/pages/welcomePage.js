@@ -1,7 +1,10 @@
-import { example } from '../constants.js';
-import { renderDrinkPage } from './drinkPage.js';
 import { getRandomDrink } from '../api/randomDrink.js';
+import { renderErrorPage } from './errorPage.js';
 
 export function initWelcomePage() {
-  getRandomDrink();
+  try {
+    getRandomDrink();
+  } catch (error) {
+    renderErrorPage(error);
+  }
 }
